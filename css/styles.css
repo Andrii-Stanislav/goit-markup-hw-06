@@ -409,7 +409,7 @@ color: var(--secondary-text-color);
 .team-section {
   padding-top: 94px;
   padding-bottom: 94px;
-
+  max-width: 1600px;
   background-color: var(--secondary-bg-color);
 }
 
@@ -696,9 +696,34 @@ margin-bottom: 9px;
 
 
 .subscribe-container {
+  display: inline-flex;
+  flex-wrap: wrap;
   padding-top: 12px;
   padding-bottom: 34px;
   width: 570px;
+}
+
+.subscribe-word {
+  width: 358px;
+}
+
+.subscribe-label {
+  width: 358px;
+  margin-right: 12px;
+}
+
+.subscribe-input {
+width: 358px;
+height: 50px;
+padding: 15px 16px 15px 16px;
+
+border: 1px solid rgba(255, 255, 255, 0.3);
+border-radius: 4px;
+background-color: var(--footer-bg-color);
+
+font-size: 16px;
+line-height: 1.25;
+color: rgba(255, 255, 255, 0.6);
 }
 
 .footer-btn {
@@ -706,6 +731,7 @@ margin-bottom: 9px;
   align-items: center;
   padding-right: 28px;
   padding-left: 28px;
+  margin: 0px;
   min-width: 200px;
   height: 50px;
   border: 0px;
@@ -728,7 +754,255 @@ margin-bottom: 9px;
 }
 
 
+/*  Модальное окно  */
 
+.modal-overlay {
+  position: fixed;
+  top: 0px;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+.modal-container {
+position: absolute;
+top: 50%;
+left: 50%;
+transform: translate(-50%,-50%);
+width: 528px;
+height: 581px;
+padding: 40px;
+
+background-color: #ffffff;
+box-shadow: 0px 2px 1px rgba(0, 0, 0, 0.2), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12);
+border-radius: 4px;
+}
+
+.close-modal-btn {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+
+  background: #FFFFFF;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  box-sizing: border-box;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+}
+
+.close-btn-svg {
+  width: 11px;
+  height: 11px;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+}
+
+.close-modal-btn:hover .close-btn-svg, 
+.close-modal-btn:focus .close-btn-svg {
+  fill: var(--accent-color);
+}
+
+.modal-header {
+margin-top: 0px;
+margin-bottom: 30px;
+font-weight: bold;
+font-size: 20px;
+line-height: 1.15;
+text-align: center;
+color: var(--secondary-text-color); 
+}
+
+.modal-form {
+  position: relative;
+}
+
+.label-text {
+  position: absolute;
+  top: 12px;
+  left: 42px;
+
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.01em;
+
+  color: var(--primery-text-color);
+}
+
+.input-text {
+display: block;
+width: 100%;
+height: 40px;
+margin-bottom: 28px;
+padding: 12px 16px 12px 42px;
+
+outline: none;
+border: 1px solid rgba(33, 33, 33, 0.2);
+border-radius: 4px;
+}
+
+.modal-icon-text {
+  position: absolute;
+  top: 12px;
+  left: 16px;
+  display: block;
+  width: 18px;
+  height: 18px;
+
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+}
+
+.label-tel {
+  position: absolute;
+  top: 80px;
+  left: 42px;
+
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.01em;
+
+  color: var(--primery-text-color);
+}
+
+.input-tel {
+  display: block;
+  width: 100%;
+  height: 40px;
+  margin-bottom: 28px;
+  padding: 12px 16px 12px 42px;
+
+  outline: none;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+}
+
+.modal-icon-tel {
+  position: absolute;
+  top: 80px;
+  left: 16px;
+  display: block;
+  width: 18px;
+  height: 18px;
+
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+}
+
+.label-mail {
+  position: absolute;
+  top: 148px;
+  left: 42px;
+
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.01em;
+
+  color: var(--primery-text-color);
+}
+
+.input-mail {
+  display: block;
+  width: 100%;
+  height: 40px;
+  margin-bottom: 28px;
+  padding: 12px 16px 12px 42px;
+
+  outline: none;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+}
+
+.modal-icon-mail {
+  position: absolute;
+  top: 148px;
+  left: 16px;
+  display: block;
+  width: 18px;
+  height: 18px;
+
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+}
+
+.input-text:focus + .modal-icon-text,
+.input-tel:focus + .modal-icon-tel,
+.input-mail:focus + .modal-icon-mail {
+  fill: var(--accent-color);
+}
+
+
+.textarea {
+  resize: none;
+  width: 100%;
+  height: 120px;
+  padding: 12px 16px;
+  margin-bottom: 20px;
+
+  outline: none;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+}
+
+.modal-checkbox {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+.modal-checkbox-icon {
+  position: absolute;
+  top: 352px;
+  left: 16px;
+  display: block;
+
+  border: 2px solid var(--secondary-text-color);
+  border-radius: 2px;
+  width: 16px;
+  height: 15px;
+}
+
+.modal-checkbox-label {
+  margin-left: 36px;
+  font-size: 14px;
+  line-height: 1.71;
+  color: var(--primery-text-color);
+}
+
+.modal-contract {
+  font-size: 14px;
+  line-height: 1.71;
+  color: var(--accent-color);
+}
+
+
+.mobal-send-btn {
+  display: block;
+  padding-bottom: 10px;
+  padding-top: 10px;
+  padding-right: 32px;
+  padding-left: 32px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 30px;
+  width: 200px;
+  height: 50px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border: 0px;
+  border-radius: 4px;
+
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.88;
+  text-align: center;
+  letter-spacing: 0.06em;
+  color: var(--darkbackground-text-color);
+  background-color: var(--accent-color);
+}
 
 /*
 Portfolio
