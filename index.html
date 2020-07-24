@@ -39,7 +39,7 @@
       <!-- Герой -->
       <section class="hero-section"> 
           <h1 class="hero-title">Эффективные решения <br> для вашего бизнеса</h1>
-          <button class="hero-btn">Заказать услугу</button>
+          <button class="hero-btn" data-modal-open>Заказать услугу</button>
       </section>
 
       <!-- Наши особенности -->
@@ -387,49 +387,53 @@
       </div>
     </footer>
 
-    <div class="modal-overlay">
+    <div class="modal-overlay is-hidden" data-modal>
       <div class="modal-container">
-        <button class="close-modal-btn">
+        <button class="close-modal-btn" data-modal-close>
           <svg class="close-btn-svg">
             <use href="./images/sprite.svg#modal-close-btn"></use>
           </svg>
         </button>
         <p class="modal-header">Оставьте свои данные, мы вам перезвоним</p>
         <form class="modal-form">
-          <label class="label-text" for="input-text">Имя</label>
-            <input class="input-text" id="input-text" type="text" placeholder=" ">
+            <input class="input-text" id="input-text" name="modal-form" type="text" placeholder=" ">
+            <label class="label-text" for="input-text">Имя</label>
             <!-- <span class="modal-icon-text"></span> -->
             <svg class="modal-icon-text">
               <use href="./images/sprite.svg#modal-person"></use>
             </svg>
 
-          <label class="label-tel" for="input-tel">Телефон</label>
-            <input class="input-tel" id="input-tel" type="tel" placeholder=" ">
+            <input class="input-tel" id="input-tel" name="modal-form" type="tel" placeholder=" ">
+            <label class="label-tel" for="input-tel">Телефон</label>
             <!-- <span class="modal-icon-tel"></span> -->
             <svg class="modal-icon-tel">
               <use href="./images/sprite.svg#modal-phone"></use>
             </svg>
 
-          <label class="label-mail" for="input-mail">Почта</label>
-            <input class="input-mail" id="input-mail" type="email" placeholder=" ">
+            <input class="input-mail" id="input-mail" name="modal-form" type="email" placeholder=" ">
+            <label class="label-mail" for="input-mail">Почта</label>
             <!-- <span class="modal-icon-mail"></span> -->
             <svg class="modal-icon-mail">
               <use href="./images/sprite.svg#modal-mail"></use>
             </svg>
 
           <label class="label-textarea" >
-            <textarea class="textarea" name="" placeholder="Комментарий"></textarea>
+            <textarea class="textarea" name="modal-form" placeholder="Комментарий"></textarea>
           </label>
 
-          <span class="modal-checkbox-icon"></span>
-          <label class="modal-checkbox-label">
-            <input class="modal-checkbox" type="checkbox">
-            Соглашаюсь с рассылкой и принимаю 
+          <label class="modal-checkbox-label" for="modal-checkbox-agree">
+            <input class="modal-checkbox" id="modal-checkbox-agree" name="modal-form" type="checkbox">
+            <svg class="modal-checkbox-icon">
+              <use href="./images/sprite.svg#modal-check"></use>
+            </svg>
+            Соглашаюсь с рассылкой и принимаю
           </label>
           <a class="modal-contract" href="">Условия договора</a>
           <button class="mobal-send-btn">Отправить</button>
         </form>
       </div>
     </div>
+
+    <script src="./js/modal.js"></script>
   </body>
 </html>

@@ -116,13 +116,13 @@ margin-right: 85px;
   line-height: 1.14;
   letter-spacing: 0.02em;
   color: var(--secondary-text-color);
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .main-nav-link:hover,
 .main-nav-link:focus {
   color: var(--accent-color);
   cursor: pointer;
-  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .main-nav-link::after {
@@ -164,11 +164,13 @@ margin-right: 85px;
   line-height: 1.4;
   letter-spacing: 0.02em;
   color: var(--primery-text-color); 
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .header-icon {
   margin-right: 10px; 
   fill: var(--primery-text-color);
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .header-icon.mail {
@@ -185,14 +187,12 @@ margin-right: 85px;
 .header-contacts-link:focus {
   color: var(--accent-color);
   cursor: pointer;
-  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .header-contacts-link:hover .header-icon,
 .header-contacts-link:focus .header-icon {
   fill: var(--accent-color);
   cursor: pointer;
-  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /*
@@ -232,10 +232,7 @@ color: var(--darkbackground-text-color);
 }
 
 .hero-btn {
-padding-bottom: 10px;
-padding-top: 10px;
-padding-right: 32px;
-padding-left: 32px;
+padding: 10px 32px;
 margin-left: auto;
 margin-right: auto;
 height: 50px;
@@ -482,11 +479,13 @@ color: var(--secondary-text-color);
   width: 44px;
   height: 44px;
   border-radius: 50%;
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .social-icon {
   width: 20px;
   height: 20px; 
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .social-icon.team-link {
@@ -497,14 +496,12 @@ color: var(--secondary-text-color);
 .team-social-link:focus {
   background-color: var(--accent-color);
   cursor: pointer;
-  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .team-social-link:focus .social-icon,
 .team-social-link:hover .social-icon {
   fill: var(--darkbackground-text-color) ;
   cursor: pointer;
-  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /* Clients Content */
@@ -546,10 +543,12 @@ color: var(--secondary-text-color);
   border-width: 1px;
   border-color: #AFB1B8;
   border-radius: 5px;
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .clients-icon {
   fill: #AFB1B8;  
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .clients-icon.first-logo {
@@ -586,14 +585,12 @@ color: var(--secondary-text-color);
 .clients-list-link:hover{
   border-color: var(--accent-color);
   cursor: pointer;
-  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .clients-list-link:focus .clients-icon,
 .clients-list-link:hover .clients-icon{
   fill: var(--accent-color);
   cursor: pointer;
-  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 
@@ -677,6 +674,7 @@ margin-bottom: 9px;
   height: 44px;
   background-color: rgba(255, 255, 255, 0.1);
   border-radius: 50%;
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .social-icon.footer-link {
@@ -691,7 +689,6 @@ margin-bottom: 9px;
 .join-list-link:focus {
   background-color: var(--accent-color);
   cursor: pointer;
-  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 } 
 
 
@@ -763,12 +760,23 @@ color: rgba(255, 255, 255, 0.6);
   height: 100%;
   background-color: rgba(0, 0, 0, 0.2);
 }
+/* visibility, opacity и pointer-events */
+.is-hidden {
+  visibility: hidden;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.modal-overlay.is-hidden .modal-container {
+  transform: translate(-50%,-50%) scale(1.2);
+} 
+
 
 .modal-container {
 position: absolute;
 top: 50%;
 left: 50%;
-transform: translate(-50%,-50%);
+transform: translate(-50%,-50%) scale(1);
 width: 528px;
 height: 581px;
 padding: 40px;
@@ -776,6 +784,8 @@ padding: 40px;
 background-color: #ffffff;
 box-shadow: 0px 2px 1px rgba(0, 0, 0, 0.2), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12);
 border-radius: 4px;
+
+transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .close-modal-btn {
@@ -797,6 +807,7 @@ border-radius: 4px;
   background-repeat: no-repeat;
   background-size: contain;
   background-position: center;
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .close-modal-btn:hover .close-btn-svg, 
@@ -818,19 +829,27 @@ color: var(--secondary-text-color);
   position: relative;
 }
 
-.label-text {
-  position: absolute;
-  top: 12px;
-  left: 42px;
-
+.label-text, 
+.label-mail, 
+.label-tel {
   font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.01em;
 
   color: var(--primery-text-color);
+
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.input-text {
+.label-text {
+  position: absolute;
+  top: 12px;
+  left: 42px;
+}
+
+.input-text, 
+.input-tel, 
+.input-mail {
 display: block;
 width: 100%;
 height: 40px;
@@ -840,6 +859,12 @@ padding: 12px 16px 12px 42px;
 outline: none;
 border: 1px solid rgba(33, 33, 33, 0.2);
 border-radius: 4px;
+
+font-size: 14px;
+line-height: 1.14;
+letter-spacing: 0.01em;
+
+transition: 250ms border-color cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .modal-icon-text {
@@ -853,30 +878,14 @@ border-radius: 4px;
   background-repeat: no-repeat;
   background-size: contain;
   background-position: center;
+
+  transition: 250ms fill cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .label-tel {
   position: absolute;
   top: 80px;
   left: 42px;
-
-  font-size: 14px;
-  line-height: 1.14;
-  letter-spacing: 0.01em;
-
-  color: var(--primery-text-color);
-}
-
-.input-tel {
-  display: block;
-  width: 100%;
-  height: 40px;
-  margin-bottom: 28px;
-  padding: 12px 16px 12px 42px;
-
-  outline: none;
-  border: 1px solid rgba(33, 33, 33, 0.2);
-  border-radius: 4px;
 }
 
 .modal-icon-tel {
@@ -890,30 +899,14 @@ border-radius: 4px;
   background-repeat: no-repeat;
   background-size: contain;
   background-position: center;
+
+  transition: 250ms fill cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .label-mail {
   position: absolute;
   top: 148px;
   left: 42px;
-
-  font-size: 14px;
-  line-height: 1.14;
-  letter-spacing: 0.01em;
-
-  color: var(--primery-text-color);
-}
-
-.input-mail {
-  display: block;
-  width: 100%;
-  height: 40px;
-  margin-bottom: 28px;
-  padding: 12px 16px 12px 42px;
-
-  outline: none;
-  border: 1px solid rgba(33, 33, 33, 0.2);
-  border-radius: 4px;
 }
 
 .modal-icon-mail {
@@ -927,14 +920,29 @@ border-radius: 4px;
   background-repeat: no-repeat;
   background-size: contain;
   background-position: center;
+
+  transition: 250ms fill cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.input-text:focus + .modal-icon-text,
-.input-tel:focus + .modal-icon-tel,
-.input-mail:focus + .modal-icon-mail {
+.input-text:focus ~ .modal-icon-text,
+.input-tel:focus ~ .modal-icon-tel,
+.input-mail:focus ~ .modal-icon-mail {
   fill: var(--accent-color);
 }
 
+.input-text:focus + .label-text,
+.input-tel:focus + .label-tel,
+.input-mail:focus + .label-mail {
+ transform: translate(-20px, -30px);
+ font-size: 12px;
+ color: var(--accent-color);
+}
+
+.input-text:focus,
+.input-tel:focus,
+.input-mail:focus {
+  border-color: var(--accent-color);
+}
 
 .textarea {
   resize: none;
@@ -946,12 +954,28 @@ border-radius: 4px;
   outline: none;
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
+
+  transition: 250ms border-color cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.textarea:focus {
+  border-color: var(--accent-color);
 }
 
 .modal-checkbox {
-  -webkit-appearance: none;
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+  /* -webkit-appearance: none;
   -moz-appearance: none;
-  appearance: none;
+  appearance: none; */
 }
 
 .modal-checkbox-icon {
@@ -959,11 +983,17 @@ border-radius: 4px;
   top: 352px;
   left: 16px;
   display: block;
+  width: 16px;
+  height: 15px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 
   border: 2px solid var(--secondary-text-color);
   border-radius: 2px;
-  width: 16px;
-  height: 15px;
+  fill-opacity: 0;
+
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .modal-checkbox-label {
@@ -979,13 +1009,15 @@ border-radius: 4px;
   color: var(--accent-color);
 }
 
+.modal-checkbox:checked + .modal-checkbox-icon {
+  border: 0px;
+  fill-opacity: 1;
+}
+
 
 .mobal-send-btn {
   display: block;
-  padding-bottom: 10px;
-  padding-top: 10px;
-  padding-right: 32px;
-  padding-left: 32px;
+  padding: 10px 32px;
   margin-left: auto;
   margin-right: auto;
   margin-top: 30px;
@@ -1002,6 +1034,7 @@ border-radius: 4px;
   letter-spacing: 0.06em;
   color: var(--darkbackground-text-color);
   background-color: var(--accent-color);
+  cursor: pointer;
 }
 
 /*
@@ -1044,6 +1077,7 @@ Main Section
   color: var(--secondary-text-color);
 
   background-color: var(--secondary-bg-color);
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .portfolio-btn-item:not(:last-of-type) {
@@ -1056,7 +1090,6 @@ Main Section
   background-color: var(--accent-color);
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   cursor: pointer;
-  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 
@@ -1078,6 +1111,7 @@ margin-right: 30px;
   border: 1px solid #EEEEEE;
   width: 370px;
   padding-bottom: 20px;
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .portfolio-list-link img {
@@ -1106,7 +1140,6 @@ margin-right: 30px;
 .portfolio-list-link:hover {
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   cursor: pointer;
-  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .portfolio-list-link:focus .portfolio-description,
