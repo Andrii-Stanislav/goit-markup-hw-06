@@ -6,32 +6,37 @@
   --light-text-color: #ffffff;
   --secendary-text-color: #f4f4fd;
   --main-action-color: #4d5ae5;
+  --secendary-action-color: #4d5ae5;
   --light-bg-color: #f4f4fd;
   --dark-bg-color: #2e2f42;
+  --main-bg-color: #ffffff;
 }
 
 body {
+  background-color: var(--main-bg-color);
   color: var(--main-text-color);
   font-family: var(--main-font);
   font-style: normal;
   letter-spacing: 0.02em;
 }
 
-a {
+.link {
   text-decoration: none;
   font-style: normal;
 }
 
-ul {
+.list {
   list-style: none;
 }
 
 .logo {
-  color: var(--dark-text-color);
+  color: var(--main-action-color);
   font-family: var(--logo-font);
   font-weight: 800;
   font-size: 18px;
-  line-height: 1.2em;
+  line-height: 1.17;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
 }
 
 .footer .logo {
@@ -39,15 +44,19 @@ ul {
 }
 
 .logo > span {
-  color: var(--main-action-color);
+  color: var(--dark-text-color);
 }
 
-.main-menu .link {
+.nav-link {
   color: var(--dark-text-color);
   font-size: 16px;
   font-weight: 500;
   line-height: 1.5em;
   letter-spacing: 0.02em;
+}
+
+.address {
+  font-style: normal;
 }
 
 .contact-menu .link {
@@ -58,25 +67,37 @@ ul {
   letter-spacing: 0.02em;
 }
 
+.contact-menu .link:hover,
+.contact-menu .link:focus {
+  color: var(--secendary-action-color);
+}
+
 .hero {
   text-align: center;
   background-color: var(--dark-text-color);
 }
 
 .hero .title {
-  color: var(--secendary-text-color);
+  color: var(--light-text-color);
   font-weight: 700;
   font-size: 56px;
   line-height: 1.07em;
+  letter-spacing: 0.02em;
 }
 
 .hero .button {
   background-color: var(--main-action-color);
-  color: var(--secendary-text-color);
+  color: var(--light-text-color);
   font-weight: 500;
   font-size: 16px;
   line-height: 1.5em;
   letter-spacing: 0.04em;
+  cursor: pointer;
+}
+
+.hero .button:hover,
+.hero .button:focus {
+  color: var(--secendary-action-color);
 }
 
 .section-title {
@@ -91,6 +112,8 @@ ul {
   font-weight: 500;
   font-size: 20px;
   line-height: 1.2em;
+  letter-spacing: 0.02em;
+  color: var(--dark-text-color);
 }
 
 .our-principles .description {
