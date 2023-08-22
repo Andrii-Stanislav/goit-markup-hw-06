@@ -64,7 +64,7 @@ body {
   font-style: normal;
 }
 
-.contact-menu .link {
+.contact-link {
   color: var(--main-text-color);
   font-size: 16px;
   font-weight: 400;
@@ -72,8 +72,8 @@ body {
   letter-spacing: 0.02em;
 }
 
-.contact-menu .link:hover,
-.contact-menu .link:focus {
+.contact-link:hover,
+.contact-link:focus {
   color: var(--secendary-action-color);
 }
 
@@ -102,7 +102,7 @@ body {
 
 .hero .button:hover,
 .hero .button:focus {
-  color: var(--secendary-action-color);
+  background-color: var(--secendary-action-color);
 }
 
 .section-title {
@@ -115,16 +115,17 @@ body {
   letter-spacing: 0.02em;
 }
 
-.our-principles .team-item {
-  background-color: #ffffff;
+.team-item {
+  background-color: var(--main-bg-color);
 }
 
-.our-principles .title {
+.team-title {
   font-weight: 500;
   font-size: 20px;
   line-height: 1.2em;
-  letter-spacing: 0.02;
+  letter-spacing: 0.02em;
   color: var(--dark-text-color);
+  text-align: center;
 }
 
 .our-principles .description {
@@ -171,13 +172,18 @@ body {
   line-height: 1.5em;
   text-align: center;
   letter-spacing: 0.04em;
+  cursor: pointer;
 }
 
 .filter-button.state-active,
 .filter-button:hover,
 .filter-button:focus {
-  background-color: var(--main-action-color);
+  background-color: var(--secendary-action-color);
   color: var(--light-text-color);
+}
+
+.portfolio-item {
+  background-color: var(--main-bg-color);
 }
 
 .product-title {
