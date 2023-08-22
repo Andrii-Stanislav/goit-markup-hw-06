@@ -88,6 +88,9 @@ img {
 
 .header-nav .item {
   margin-right: 40px;
+}
+
+.header-nav .nav-link {
   padding: 24px 0;
 }
 
@@ -375,10 +378,6 @@ img {
   flex-wrap: wrap;
   row-gap: 48px;
   column-gap: 24px;
-}
-
-.portfolio-list .item {
-  /*  */
 }
 
 .portfolio-item {
