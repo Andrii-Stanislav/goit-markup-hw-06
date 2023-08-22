@@ -5,12 +5,15 @@
   --dark-text-color: #2e2f42;
   --light-text-color: #ffffff;
   --secendary-text-color: #f4f4fd;
+
   --main-action-color: #4d5ae5;
   --secendary-action-color: #404bbf;
+
   --light-bg-color: #f4f4fd;
   --dark-bg-color: #2e2f42;
   --main-bg-color: #ffffff;
-  --card-border-color: #e7e9fc;
+
+  --main-border-color: #e7e9fc;
 }
 
 body {
@@ -39,6 +42,10 @@ ol {
   padding-left: 0;
 }
 
+img {
+  display: block;
+}
+
 .link {
   text-decoration: none;
   font-style: normal;
@@ -57,8 +64,7 @@ ol {
 }
 
 .header {
-  padding-top: 24px;
-  padding-bottom: 24px;
+  border-bottom: 1px solid var(--main-border-color);
 }
 
 .header-box {
@@ -68,6 +74,7 @@ ol {
 
 .header-nav {
   display: flex;
+  align-items: center;
 }
 
 .header-nav .logo {
@@ -76,18 +83,21 @@ ol {
 
 .header-nav .list {
   display: flex;
+  gap: 40px;
 }
 
-.header-nav .item:not(:last-child) {
+.header-nav .item {
   margin-right: 40px;
+  padding: 24px 0;
 }
 
 .address .list {
   display: flex;
+  gap: 40px;
 }
 
 .address .item {
-  margin-right: 40px;
+  padding: 24px 0;
 }
 
 .logo {
@@ -146,6 +156,8 @@ ol {
 }
 
 .hero .title {
+  margin: 0 auto;
+  max-width: 496px;
   color: var(--light-text-color);
   font-weight: 700;
   font-size: 56px;
@@ -155,9 +167,12 @@ ol {
 }
 
 .hero .button {
+  display: block;
+  margin: 0 auto;
   padding: 16px 32px;
   border: 0;
   border-radius: 4px;
+  min-width: 169px;
 
   background-color: var(--main-action-color);
   font-family: "Roboto", sans-serif;
@@ -184,8 +199,18 @@ ol {
   letter-spacing: 0.02em;
 }
 
-.hidden {
-  display: none;
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
 }
 
 .our-principles {
@@ -197,11 +222,16 @@ ol {
   display: flex;
 }
 
+.our-principles .item {
+  width: calc((100% - 72px) / 4);
+}
+
 .our-principles .item:not(:last-child) {
   margin-right: 24px;
 }
 
 .our-principles-title {
+  margin-bottom: 8px;
   font-weight: 500;
   font-size: 20px;
   line-height: 1.2em;
@@ -261,6 +291,8 @@ ol {
 }
 
 .team-title {
+  margin-bottom: 8px;
+
   font-weight: 500;
   font-size: 20px;
   line-height: 1.2em;
@@ -282,9 +314,12 @@ ol {
   background-color: var(--dark-bg-color);
 }
 
-.footer-text {
-  margin-top: 16px;
+.footer .logo {
+  display: inline-block;
+  margin-bottom: 16px;
+}
 
+.footer-text {
   color: var(--secendary-text-color);
   font-size: 16px;
   line-height: 1.5em;
@@ -314,6 +349,7 @@ ol {
   padding: 12px 24px;
   border: 0;
   border-radius: 4px;
+  border: 1px solid var(--main-border-color);
 
   background-color: var(--light-bg-color);
   font-family: "Roboto", sans-serif;
@@ -331,13 +367,18 @@ ol {
 .filter-button:focus {
   background-color: var(--secendary-action-color);
   color: var(--light-text-color);
+  border-color: transparent;
 }
 
-.portfolio-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
+.portfolio-list {
+  display: flex;
+  flex-wrap: wrap;
   row-gap: 48px;
   column-gap: 24px;
+}
+
+.portfolio-list .item {
+  /*  */
 }
 
 .portfolio-item {
@@ -355,10 +396,12 @@ ol {
   border-bottom: 1px solid;
   border-right: 1px solid;
   border-left: 1px solid;
-  border-color: var(--card-border-color);
+  border-color: var(--main-border-color);
 }
 
 .product-title {
+  margin-bottom: 8px;
+
   color: var(--dark-text-color);
   font-weight: 500;
   font-size: 20px;
