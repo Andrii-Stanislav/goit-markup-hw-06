@@ -1,0 +1,159 @@
+:root {
+  --main-font: "Roboto", sans-serif;
+  --logo-font: "Raleway", sans-serif;
+  --main-text-color: #434455;
+  --dark-text-color: #2e2f42;
+  --light-text-color: #ffffff;
+  --secendary-text-color: #f4f4fd;
+  --main-action-color: #4d5ae5;
+  --light-bg-color: #f4f4fd;
+  --dark-bg-color: #2e2f42;
+}
+
+body {
+  color: var(--main-text-color);
+  font-family: var(--main-font);
+  font-style: normal;
+  letter-spacing: 0.02em;
+}
+
+a {
+  text-decoration: none;
+  font-style: normal;
+}
+
+ul {
+  list-style: none;
+}
+
+.logo {
+  color: var(--dark-text-color);
+  font-family: var(--logo-font);
+  font-weight: 800;
+  font-size: 18px;
+  line-height: 1.2em;
+}
+
+.footer .logo {
+  color: var(--secendary-text-color);
+}
+
+.logo > span {
+  color: var(--main-action-color);
+}
+
+.main-menu .link {
+  color: var(--dark-text-color);
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.5em;
+  letter-spacing: 0.02em;
+}
+
+.contact-menu .link {
+  color: var(--main-text-color);
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.5em;
+  letter-spacing: 0.02em;
+}
+
+.hero {
+  text-align: center;
+  background-color: var(--dark-text-color);
+}
+
+.hero .title {
+  color: var(--secendary-text-color);
+  font-weight: 700;
+  font-size: 56px;
+  line-height: 1.07em;
+}
+
+.hero .button {
+  background-color: var(--main-action-color);
+  color: var(--secendary-text-color);
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5em;
+  letter-spacing: 0.04em;
+}
+
+.section-title {
+  color: var(--dark-text-color);
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.11em;
+  text-align: center;
+}
+
+.our-principles .title {
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 1.2em;
+}
+
+.our-principles .description {
+  font-size: 16px;
+  line-height: 1.5em;
+}
+
+.our-team {
+  background-color: var(--light-bg-color);
+}
+
+.our-team .title {
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 1.2em;
+  text-align: center;
+}
+
+.our-team .role {
+  font-size: 16px;
+  line-height: 1.5em;
+  text-align: center;
+}
+
+.footer {
+  background-color: var(--dark-bg-color);
+}
+
+.footer-text {
+  color: var(--secendary-text-color);
+  font-size: 16px;
+  line-height: 1.5em;
+}
+
+/* 
+* Portfolio
+*/
+
+.filter-button {
+  background-color: var(--light-bg-color);
+  color: var(--main-action-color);
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5em;
+  text-align: center;
+  letter-spacing: 0.04em;
+}
+
+.filter-button.state-active,
+.filter-button:hover,
+.filter-button:focus {
+  background-color: var(--main-action-color);
+  color: var(--light-text-color);
+}
+
+.product-title {
+  color: var(--dark-text-color);
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 1.2em;
+}
+
+.product-type {
+  font-size: 16px;
+  line-height: 1.5em;
+}
