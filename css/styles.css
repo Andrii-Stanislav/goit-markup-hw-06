@@ -39,7 +39,7 @@ body {
   text-transform: uppercase;
 }
 
-.logo > span {
+.logo > .span {
   color: var(--dark-text-color);
 }
 
@@ -92,6 +92,7 @@ body {
 
 .hero .button {
   background-color: var(--main-action-color);
+  font-family: "Roboto", sans-serif;
   color: var(--light-text-color);
   font-weight: 500;
   font-size: 16px;
@@ -119,7 +120,7 @@ body {
   background-color: var(--main-bg-color);
 }
 
-.team-title {
+.our-principles-title {
   font-weight: 500;
   font-size: 20px;
   line-height: 1.2em;
@@ -128,7 +129,7 @@ body {
   text-align: center;
 }
 
-.our-principles .description {
+.our-principles-description {
   font-size: 16px;
   line-height: 1.5em;
 }
@@ -137,10 +138,12 @@ body {
   background-color: var(--light-bg-color);
 }
 
-.our-team .title {
+.team-title {
   font-weight: 500;
   font-size: 20px;
   line-height: 1.2em;
+  letter-spacing: 0.02em;
+  color: var(--dark-text-color);
   text-align: center;
 }
 
@@ -166,6 +169,7 @@ body {
 
 .filter-button {
   background-color: var(--light-bg-color);
+  font-family: "Roboto", sans-serif;
   color: var(--main-action-color);
   font-weight: 500;
   font-size: 16px;
@@ -191,9 +195,11 @@ body {
   font-weight: 500;
   font-size: 20px;
   line-height: 1.2em;
+  letter-spacing: 0.02em;
 }
 
 .product-type {
   font-size: 16px;
   line-height: 1.5em;
+  color: var(--main-text-color);
 }
