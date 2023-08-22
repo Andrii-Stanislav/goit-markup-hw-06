@@ -6,7 +6,7 @@
   --light-text-color: #ffffff;
   --secendary-text-color: #f4f4fd;
   --main-action-color: #4d5ae5;
-  --secendary-action-color: #4d5ae5;
+  --secendary-action-color: #404bbf;
   --light-bg-color: #f4f4fd;
   --dark-bg-color: #2e2f42;
   --main-bg-color: #ffffff;
@@ -39,12 +39,12 @@ body {
   text-transform: uppercase;
 }
 
-.footer .logo {
-  color: var(--secendary-text-color);
-}
-
 .logo > span {
   color: var(--dark-text-color);
+}
+
+.logo > .f-logo-subtext {
+  color: var(--light-bg-color);
 }
 
 .nav-link {
@@ -53,6 +53,11 @@ body {
   font-weight: 500;
   line-height: 1.5em;
   letter-spacing: 0.02em;
+}
+
+.nav-link:hover,
+.nav-link:focus {
+  color: var(--secendary-action-color);
 }
 
 .address {
@@ -111,14 +116,14 @@ body {
 }
 
 .our-principles .team-item {
-  background-color: var(--main-bg-color);
+  background-color: #ffffff;
 }
 
 .our-principles .title {
   font-weight: 500;
   font-size: 20px;
   line-height: 1.2em;
-  letter-spacing: 0.02em;
+  letter-spacing: 0.02;
   color: var(--dark-text-color);
 }
 
