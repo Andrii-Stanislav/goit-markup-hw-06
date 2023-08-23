@@ -86,10 +86,6 @@ img {
   gap: 40px;
 }
 
-.header-nav .item {
-  margin-right: 40px;
-}
-
 .header-nav .nav-link {
   display: inline-block;
   padding: 24px 0;
@@ -241,7 +237,6 @@ img {
   line-height: 1.2em;
   letter-spacing: 0.02em;
   color: var(--dark-text-color);
-  text-align: center;
 }
 
 .our-principles-description {
