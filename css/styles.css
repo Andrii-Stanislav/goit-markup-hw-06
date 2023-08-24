@@ -13,6 +13,8 @@
   --light-bg-color: #f4f4fd;
   --dark-bg-color: #2e2f42;
   --main-bg-color: #ffffff;
+  --modal-bg-color: #fcfcfc;
+  --modal-overlay-color: #2e2f4266;
 
   --main-border-color: #e7e9fc;
   --secendary-border-color: #8e8f99;
@@ -441,7 +443,7 @@ img {
   gap: 120px;
 }
 
-.footer-box .social-page {
+.footer .social-page {
   gap: 16px;
 }
 
@@ -465,6 +467,11 @@ img {
   line-height: 24px;
   letter-spacing: 0.02em;
   text-align: left;
+}
+
+.footer .social-link-svg {
+  width: 24px;
+  height: 24px;
 }
 
 /* 
@@ -538,13 +545,41 @@ img {
   display: block;
 }
 
-.portfolio-item .item-content {
+.portfolio-item .product-content {
   padding: 32px 16px;
 
   border-bottom: 1px solid;
   border-right: 1px solid;
   border-left: 1px solid;
   border-color: var(--main-border-color);
+}
+
+.portfolio-img-box {
+  position: relative;
+  overflow: hidden;
+}
+
+.product-description {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  padding: 40px 32px;
+  background-color: var(--main-action-color);
+
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: 0.02em;
+  text-align: left;
+  color: var(--secendary-text-color);
+
+  transition: top 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.portfolio-item:hover .product-description {
+  top: 0;
 }
 
 .product-title {
@@ -561,4 +596,71 @@ img {
   font-size: 16px;
   line-height: 1.5em;
   color: var(--main-text-color);
+}
+
+/* 
+* Modal
+*/
+
+.is-hidden {
+  visibility: hidden;
+  pointer-events: none;
+  opacity: 0;
+}
+
+.backdrop {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: var(--modal-overlay-color);
+  z-index: 100;
+
+  transition-property: all;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.modal-box {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  width: 408px;
+  height: 584px;
+  border-radius: 4px;
+  background-color: var(--modal-bg-color);
+}
+
+.close-modal {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  border: 1px solid #0000001a;
+  border-radius: 50%;
+  box-sizing: border-box;
+  width: 30px;
+  height: 30px;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.close-svg {
+  transition-property: fill;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  fill: var(--dark-text-color);
+}
+
+.close-modal:focus,
+.close-modal:hover {
+  background-color: var(--secendary-action-color);
+  border-color: var(--secendary-action-color);
+}
+
+.close-modal:focus .close-svg,
+.close-modal:hover .close-svg {
+  fill: var(--light-text-color);
 }
