@@ -218,6 +218,7 @@ img {
       rgba(46, 47, 66, 0.7)
     ),
     url(../images/hero-bg.jpg);
+  background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   background-color: var(--bg-button);
@@ -429,22 +430,24 @@ img {
   border-radius: 4px;
   color: var(--secendary-border-color);
   border-color: var(--secendary-border-color);
-  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.clients-list-link svg {
+.clients-list-link .clients-list-svg {
   fill: var(--secendary-border-color);
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .clients-list-link:hover,
 .clients-list-link:focus {
+  color: var(--secendary-action-color);
   border-color: var(--secendary-action-color);
 }
 
-.clients-list-link:hover svg,
-.clients-list-link:focus svg {
-  fill: var(--secendary-action-color);
+.clients-list-link:hover .clients-list-svg,
+.clients-list-link:focus .clients-list-svg {
+  fill: currentColor;
 }
 
 /* 
@@ -496,6 +499,11 @@ img {
 .footer .social-link-svg {
   width: 24px;
   height: 24px;
+}
+
+.footer .social-page-icon:hover,
+.footer .social-page-icon:focus {
+  background-color: var(--success-color);
 }
 
 /* 
@@ -605,7 +613,7 @@ img {
 }
 
 .portfolio-item:hover .product-description {
-  transform: translateY(0);
+  transform: translateY(0%);
 }
 
 .product-title {
@@ -659,6 +667,7 @@ img {
   min-height: 584px;
   border-radius: 4px;
   background-color: var(--modal-bg-color);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .close-modal {
@@ -671,7 +680,7 @@ img {
   padding: 0;
   border: 1px solid #0000001a;
   border-radius: 50%;
-  background-color: var(--main-border-color);
+  background-color: #e7e9fc;
   width: 24px;
   height: 24px;
   background-color: transparent;
