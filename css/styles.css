@@ -777,13 +777,16 @@ img {
   color: var(--dark-text-color);
 }
 
-.contact-form-item {
-  position: relative;
+.contact-form-item-box {
   margin-bottom: 8px;
 }
 
-.contact-form-item.textarea-item {
+.contact-textarea-box {
   margin-bottom: 16px;
+}
+
+.contact-form-item {
+  position: relative;
 }
 
 .contact-form-item .contact-form-svg {
