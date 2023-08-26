@@ -474,7 +474,7 @@
           </p>
         </div>
 
-        <div>
+        <div class="footer-center-box">
           <p class="footer-title">Social media</p>
 
           <ul class="list social-page-list">
@@ -529,16 +529,18 @@
           <p class="footer-title">Subscribe</p>
 
           <form name="subscribe" class="subscribe-field-box">
-            <input
-              type="email"
-              name="subscribe-email"
-              class="subscribe-field"
-              id="subscribe-email"
-              placeholder="E-mail"
-            />
+            <label class="subscribe-label">
+              <input
+                type="email"
+                name="subscribe-email"
+                class="subscribe-field"
+                id="subscribe-email"
+                placeholder="E-mail"
+              />
+            </label>
 
             <button type="submit" class="subscribe-button">
-              <spam>Subscribe</spam>
+              Subscribe
               <svg width="24" height="24">
                 <use href="./images/icons.svg#subscribe"></use>
               </svg>
@@ -620,7 +622,7 @@
           </div>
 
           <label for="accept-checked" class="contact-checkbox-label">
-            <div>
+            <span>
               <input
                 type="checkbox"
                 name="policy"
@@ -633,7 +635,7 @@
                   <use href="./images/icons.svg#check"></use>
                 </svg>
               </span>
-            </div>
+            </span>
             <span>
               I accept the terms and conditions of the
               <a href="/">Privacy Policy</a>
