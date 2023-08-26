@@ -820,7 +820,7 @@ img {
   font-weight: 400;
   line-height: 2em;
   letter-spacing: 0.04em;
-  transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .contact-form-textarea {
@@ -861,17 +861,16 @@ img {
 .contact-checkbox-container {
   display: flex;
   align-items: center;
-  margin-bottom: 30px;
+  margin-bottom: 24px;
 }
 
 .contact-checkbox-label {
-  display: flex;
-  align-items: center;
+  display: block;
   font-size: 12px;
   font-weight: 400;
   line-height: 1.17;
   letter-spacing: 0.04em;
-  line-height: 1.16em;
+  color: var(--third-text-color);
   cursor: pointer;
 }
 
@@ -879,17 +878,6 @@ img {
   margin-left: 4px;
   line-height: 1.33em;
   color: var(--main-action-color);
-}
-
-.contact-checkbox {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  margin: -1px;
-  border: 0;
-  padding: 0;
-  clip: rect(0 0 0 0);
-  overflow: hidden;
 }
 
 .contact-custom-checkbox {
@@ -902,13 +890,16 @@ img {
   background-color: var(--main-bg-color);
   border-radius: 2px;
   margin-right: 8px;
+  fill: transparent;
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    border 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .contact-checkbox:checked ~ .contact-checkbox-label .contact-custom-checkbox {
-  background-color: var(--main-action-color);
-  border-color: var(--main-action-color);
+  background-color: var(--secendary-action-color);
+  border: none;
+  fill: var(--secendary-text-color);
 }
 
 .contact-submit-button {
