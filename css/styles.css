@@ -473,6 +473,10 @@ img {
   margin-right: 120px;
 }
 
+.footer-center-box {
+  margin-right: 80px;
+}
+
 .footer .social-page-list {
   gap: 16px;
 }
@@ -837,8 +841,11 @@ img {
   line-height: 2em;
   letter-spacing: 0.04em;
   line-height: 1.17;
-  color: rgba(46, 47, 66, 0.4);
   transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.contact-form-textarea::placeholder {
+  color: rgba(46, 47, 66, 0.4);
 }
 
 .contact-form-textarea:hover,
@@ -872,6 +879,7 @@ img {
   letter-spacing: 0.04em;
   color: var(--third-text-color);
   cursor: pointer;
+  user-select: none;
 }
 
 .contact-checkbox-label .contact-privacy-policy {
@@ -894,6 +902,11 @@ img {
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
     border 250ms cubic-bezier(0.4, 0, 0.2, 1),
     fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.contact-checkbox-label:hover .contact-custom-checkbox,
+.contact-checkbox-label:focus .contact-custom-checkbox {
+  border-color: var(--secendary-action-color);
 }
 
 .contact-checkbox:checked ~ .contact-checkbox-label .contact-custom-checkbox {
