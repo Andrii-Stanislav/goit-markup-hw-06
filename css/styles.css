@@ -352,22 +352,40 @@ img {
   background-color: var(--secendary-action-color);
 }
 
-/* 
+/* *
 * Our principles
-*/
+* */
 
 .our-principles {
-  padding-top: 120px;
-  padding-bottom: 120px;
+  padding-top: 96px;
+  padding-bottom: 96px;
+
+  @media screen and (min-width: 1158px) {
+    padding-top: 120px;
+    padding-bottom: 120px;
+  }
 }
 
 .our-principles .list {
   display: flex;
   gap: 24px;
+
+  @media screen and (max-width: 1157px) {
+    gap: 72px 24px;
+    flex-wrap: wrap;
+  }
 }
 
 .our-principles .item {
-  width: calc((100% - 72px) / 4);
+  width: 100%;
+
+  @media screen and (min-width: 768px) {
+    width: calc((100% - 48px) / 2);
+  }
+
+  @media screen and (min-width: 1158px) {
+    width: calc((100% - 72px) / 4);
+  }
 }
 
 .our-principles-img-box {
@@ -378,20 +396,38 @@ img {
   margin-bottom: 8px;
   background-color: var(--light-bg-color);
   border-radius: 4px;
+
+  @media screen and (max-width: 1157px) {
+    display: none;
+  }
 }
 
 .our-principles-title {
   margin-bottom: 8px;
-  font-weight: 500;
-  font-size: 20px;
-  line-height: 1.2em;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.11em;
   letter-spacing: 0.02em;
   color: var(--dark-text-color);
+
+  @media screen and (max-width: 767px) {
+    text-align: center;
+  }
+
+  @media screen and (min-width: 1158px) {
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 1.2em;
+  }
 }
 
 .our-principles-description {
   font-size: 16px;
   line-height: 1.5em;
+
+  @media screen and (max-width: 1157px) {
+    font-weight: 500;
+  }
 }
 
 /* 
