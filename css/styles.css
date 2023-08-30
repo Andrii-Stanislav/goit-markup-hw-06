@@ -283,23 +283,13 @@ img {
   }
 }
 
-/* 
-
-
-
-
-
+/* *
 * Hero
-
-
-
-
-
-*/
+* */
 
 .hero {
-  padding-top: 188px;
-  padding-bottom: 188px;
+  padding-top: 112px;
+  padding-bottom: 112px;
   margin: 0 auto;
   text-align: center;
   max-width: 1440px;
@@ -312,17 +302,30 @@ img {
   background-repeat: no-repeat;
   background-size: cover;
   background-color: var(--bg-button);
+
+  @media screen and (min-width: 1158px) {
+    padding-top: 188px;
+    padding-bottom: 188px;
+  }
 }
 
 .hero .title {
-  margin: 0 auto;
-  max-width: 496px;
+  max-width: 320px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 48px;
   color: var(--light-text-color);
   font-weight: 700;
-  font-size: 56px;
-  line-height: 1.07em;
+  font-size: 36px;
+  line-height: 1.11em;
   letter-spacing: 0.02em;
-  margin-bottom: 48px;
+  text-align: center;
+
+  @media screen and (min-width: 768px) {
+    max-width: 496px;
+    font-size: 56px;
+    line-height: 1.07em;
+  }
 }
 
 .hero .button {
