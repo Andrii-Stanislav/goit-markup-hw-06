@@ -611,27 +611,59 @@ img {
   fill: currentColor;
 }
 
-/* 
+/* *
 * Footer
-*/
+* */
 
 .footer {
-  padding: 100px 0;
+  padding: 96px 0;
   background-color: var(--dark-bg-color);
+
+  @media screen and (min-width: 768px) {
+    padding: 100px 0;
+  }
 }
 
 .footer-box {
   display: flex;
   align-items: baseline;
   justify-content: space-between;
+
+  @media screen and (max-width: 767px) {
+    justify-content: center;
+  }
+
+  @media screen and (min-width: 768px) and (max-width: 1157px) {
+    justify-content: flex-start;
+  }
+
+  @media screen and (max-width: 1157px) {
+    flex-wrap: wrap;
+  }
 }
 
 .footer-left-box {
-  margin-right: 120px;
+  @media screen and (min-width: 768px) {
+    margin-right: 24px;
+  }
+
+  @media screen and (max-width: 1157px) {
+    margin-bottom: 72px;
+  }
+
+  @media screen and (min-width: 1158px) {
+    margin-right: 120px;
+  }
 }
 
 .footer-center-box {
-  margin-right: 80px;
+  @media screen and (max-width: 767px) {
+    margin-bottom: 72px;
+  }
+
+  @media screen and (min-width: 1158px) {
+    margin-right: 80px;
+  }
 }
 
 .footer .social-page-list {
@@ -639,8 +671,12 @@ img {
 }
 
 .footer .logo {
-  display: inline-block;
+  display: block;
   margin-bottom: 16px;
+
+  @media screen and (max-width: 767px) {
+    text-align: center;
+  }
 }
 
 .footer-text {
@@ -658,6 +694,10 @@ img {
   line-height: 24px;
   letter-spacing: 0.02em;
   text-align: left;
+
+  @media screen and (max-width: 767px) {
+    text-align: center;
+  }
 }
 
 .footer .social-link-svg {
@@ -673,12 +713,26 @@ img {
 .subscribe-field-box {
   display: flex;
   gap: 24px;
+
+  @media screen and (max-width: 767px) {
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 16px;
+  }
+}
+
+.subscribe-label {
+  width: 100%;
+
+  @media screen and (min-width: 768px) {
+    width: 264px;
+  }
 }
 
 .subscribe-field {
   display: block;
   height: 40px;
-  width: 264px;
+  width: 100%;
   padding-left: 16px;
   outline: none;
   border: 1px solid var(--light-text-color);
