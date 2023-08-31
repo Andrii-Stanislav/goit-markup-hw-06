@@ -55,6 +55,7 @@ img {
 }
 
 .link {
+  color: currentColor;
   text-decoration: none;
   font-style: normal;
 }
@@ -116,6 +117,20 @@ img {
   border-bottom: 1px solid var(--main-border-color);
   box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08),
     0px 1px 1px rgba(46, 47, 66, 0.16), 0px 1px 6px rgba(46, 47, 66, 0.08);
+
+  @media screen and (max-width: 768px) {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: var(--main-bg-color);
+  }
+}
+
+.header + main {
+  @media screen and (max-width: 768px) {
+    padding-top: 70px;
+  }
 }
 
 .header-box {
@@ -1204,4 +1219,84 @@ img {
 .contact-submit-button:hover,
 .contact-submit-button:focus {
   background-color: var(--secendary-action-color);
+}
+
+/* *
+* Mobile menu
+* */
+
+.mobile-menu-box {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  padding: 80px 40px 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transform: translateY(-100%);
+  background-color: var(--modal-bg-color);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  @media screen and (min-width: 768px) {
+    display: none;
+  }
+}
+
+.mobile-menu-box.is-open-mobile-menu {
+  transform: translateY(0);
+}
+
+.mobile-nav-list {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.mobile-nav-link {
+  font-size: 36px;
+  line-height: 1.11em;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  color: var(--dark-text-color);
+}
+
+.mobile-nav-link.state-active {
+  color: var(--secendary-action-color);
+}
+
+.mobile-menu-box .social-page-list {
+  justify-content: space-between;
+}
+
+.mobile-menu-box .social-link-svg {
+  width: 24px;
+  height: 24px;
+}
+
+.mobile-address {
+  margin-bottom: 48px;
+}
+
+.mobile-address-list {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.mobile-contact-link.email {
+  font-size: 36px;
+  line-height: 1.11em;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  color: var(--main-action-color);
+}
+
+.mobile-contact-link.tel {
+  font-size: 20px;
+  line-height: 1.2em;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  color: var(--main-text-color);
 }
