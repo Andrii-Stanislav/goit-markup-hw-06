@@ -318,6 +318,14 @@ img {
   @media screen and (min-width: 1158px) {
     padding: 188px 0;
   }
+
+  @media (min-resolution: 192dpi) {
+    background-image: linear-gradient(
+        rgba(46, 47, 66, 0.7),
+        rgba(46, 47, 66, 0.7)
+      ),
+      url(../images/hero-bg@2x.jpg);
+  }
 }
 
 .hero .title {
@@ -389,7 +397,7 @@ img {
   width: 100%;
 
   @media screen and (min-width: 768px) {
-    width: calc((100% - 48px) / 2);
+    width: calc((100% - 24px) / 2);
   }
 
   @media screen and (min-width: 1158px) {
@@ -563,6 +571,12 @@ img {
   }
 }
 
+.clients .container {
+  @media screen and (min-width: 768px) {
+    width: 584px;
+  }
+}
+
 .clients-title {
   margin-bottom: 72px;
 }
@@ -649,6 +663,8 @@ img {
   }
 
   @media screen and (min-width: 768px) and (max-width: 1157px) {
+    width: 584px;
+    margin: 0 auto;
     justify-content: flex-start;
   }
 
@@ -1285,7 +1301,7 @@ img {
   gap: 40px;
 }
 
-.mobile-contact-link.email {
+.mobile-contact-link.tel {
   font-size: 36px;
   line-height: 1.11em;
   font-weight: 700;
@@ -1293,7 +1309,7 @@ img {
   color: var(--main-action-color);
 }
 
-.mobile-contact-link.tel {
+.mobile-contact-link.email {
   font-size: 20px;
   line-height: 1.2em;
   font-weight: 500;
